@@ -9,8 +9,9 @@ from textwrap import dedent
 import plotly.graph_objects as go
 
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUMEN, dbc.icons.FONT_AWESOME, requests_pathname_prefix='/dash_predadorpresa/'])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUMEN, dbc.icons.FONT_AWESOME], requests_pathname_prefix='/dash_predadorpresa/')
 server = app.server
+
 cabecalho = html.H1("Modelo Predador-Presa (Lotka-Volterra)",className="bg-primary text-white p-2 mb-4")
 
 descricao = dcc.Markdown(
@@ -174,4 +175,4 @@ app.layout = dbc.Container([
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
