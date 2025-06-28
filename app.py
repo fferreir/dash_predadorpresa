@@ -169,10 +169,11 @@ app.layout = dbc.Container([
                 dbc.Row([
                         dbc.Col(html.Div(ajuste_parametros), width=3),
                         dbc.Col(html.Div([ajuste_condicoes_iniciais,html.Div(textos_descricao)]), width=3),
-                        dbc.Col(dcc.Graph(id='population_chart'), width=6),
+                        dbc.Col(dcc.Graph(id='population_chart', className="shadow-sm rounded-3 border-primary",
+                                style={'height': '500px'}), width=6),
                         ]),
               ], fluid=True),
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
